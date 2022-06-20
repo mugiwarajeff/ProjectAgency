@@ -6,30 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch App",
-            "request": "launch",
-            "mainClass": "application.App",
-            "projectName": "ProjectAgencyLP1_5459966",
-            "vmArgs": "--module-path C:/JavaLibs/javafx-sdk-18.0.1/lib --add-modules javafx.controls,javafx.fxml"
-        },
-        {
-            "type": "java",
-            "name": "Launch AppTeste",
-            "request": "launch",
-            "mainClass": "application.AppTeste",
-            "projectName": "ProjectAgencyLP1_5459966",
-            "vmArgs": "--module-path C:/JavaLibs/javafx-sdk-18.0.1/lib --add-modules javafx.controls,javafx.fxml"
-        },
-        {
-            "type": "java",
-            "name": "Launch AppTeste",
-            "request": "launch",
-            "mainClass": "AppTeste",
-            "projectName": "ProjectAgencyLP1_5459966",
-            "vmArgs": "--module-path C:/JavaLibs/javafx-sdk-18.0.1/lib --add-modules javafx.controls,javafx.fxml"
-        },
-        {
-            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -38,9 +14,16 @@
             "type": "java",
             "name": "Launch App",
             "request": "launch",
-            "mainClass": "App",
-            "projectName": "ProjectAgencyLP1_5459966",
-            "vmArgs": "--module-path C:/JavaLibs/javafx-sdk-18.0.1/lib --add-modules javafx.controls,javafx.fxml"
+            "mainClass": "application.App",
+            "projectName": "ProjectAgency_afe11",
+            "vmArgs": "--module-path /home/jefferson/JavaLibs/javafx-sdk-18.0.1/lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch helloWord",
+            "request": "launch",
+            "mainClass": "application.helloWord",
+            "projectName": "ProjectAgency_afe11"
         }
     ]
 }
