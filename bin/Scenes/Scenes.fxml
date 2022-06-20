@@ -6,6 +6,7 @@
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -17,9 +18,9 @@
    <children>
       <AnchorPane>
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe0a5" height="550.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3d3737" height="550.0" layoutX="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="456.0" />
-            <ButtonBar layoutX="34.0" layoutY="167.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe0a5" height="550.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="180.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3d3737" height="550.0" layoutX="179.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="477.0" />
+            <ButtonBar layoutX="14.0" layoutY="155.0">
                <buttons>
                   <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -33,7 +34,7 @@
                   </Button>
                </buttons>
             </ButtonBar>
-            <ButtonBar layoutX="34.0" layoutY="241.0">
+            <ButtonBar layoutX="15.0" layoutY="227.0">
                <buttons>
                   <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -47,7 +48,7 @@
                   </Button>
                </buttons>
             </ButtonBar>
-            <ButtonBar layoutX="34.0" layoutY="306.0">
+            <ButtonBar layoutX="15.0" layoutY="275.0">
                <buttons>
                   <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -72,23 +73,26 @@
                </image>
             </ImageView>
             <Group layoutX="416.0" layoutY="27.0" />
-            <Label layoutX="222.0" layoutY="132.0" text="Hello! User" textFill="WHITE">
+            <Label layoutX="200.0" layoutY="85.0" text="Hello! User" textFill="WHITE">
                <font>
                   <Font size="30.0" />
                </font>
             </Label>
-            <Label layoutX="222.0" layoutY="177.0" prefHeight="51.0" prefWidth="233.0" text="Seja bem vindo ao nosso Sistema para agencias de publicidade" textFill="WHITE" wrapText="true">
+            <Label layoutX="200.0" layoutY="130.0" prefHeight="51.0" prefWidth="233.0" text="Seja bem vindo ao nosso Sistema para agencias de publicidade" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe0a5" height="115.0" layoutX="222.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffebc5" height="115.0" layoutX="339.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff5e1" height="115.0" layoutX="454.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff5e1" height="115.0" layoutX="339.0" layoutY="402.0" stroke="BLACK" strokeType="INSIDE" width="269.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe0a5" height="90.0" layoutX="487.0" layoutY="413.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="96.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe0a5" height="115.0" layoutX="200.0" layoutY="214.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffebc5" height="115.0" layoutX="328.0" layoutY="214.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff5e1" height="115.0" layoutX="457.0" layoutY="215.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="102.0">
+               <effect>
+                  <Blend />
+               </effect></Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff5e1" height="115.0" layoutX="328.0" layoutY="371.0" stroke="BLACK" strokeType="INSIDE" width="269.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe0a5" height="90.0" layoutX="476.0" layoutY="382.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="96.0" />
             <ButtonBar layoutX="367.0" layoutY="456.0" />
-            <Group layoutX="237.0" layoutY="260.0">
+            <Group layoutX="215.0" layoutY="225.0">
                <children>
                   <Label text="000">
                      <font>
@@ -98,7 +102,7 @@
                   <Label layoutY="30.0" text="Cadastradas" />
                </children>
             </Group>
-            <Group layoutX="349.0" layoutY="262.0">
+            <Group layoutX="338.0" layoutY="227.0">
                <children>
                   <Label text="000">
                      <font>
@@ -108,27 +112,27 @@
                   <Label layoutY="30.0" text="Cadastradas" />
                </children>
             </Group>
-            <Group layoutX="463.0" layoutY="262.0">
+            <Group layoutX="462.0" layoutY="234.0">
                <children>
-                  <Label text="000">
+                  <Label layoutY="-9.0" text="000">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutY="30.0" text="Cadastradas" />
+                  <Label layoutY="21.0" text="Cadastradas" />
                </children>
             </Group>
-            <Label layoutX="359.0" layoutY="413.0" text="FEED NEWS!">
+            <Label layoutX="348.0" layoutY="382.0" text="FEED NEWS!">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="358.0" layoutY="423.0" prefHeight="47.0" prefWidth="110.0" text="askdaksdaksdkaskdaskdaskd" wrapText="true">
+            <Label layoutX="347.0" layoutY="392.0" prefHeight="47.0" prefWidth="110.0" text="askdaksdaksdkaskdaskdaskd" wrapText="true">
                <font>
                   <Font size="10.0" />
                </font>
             </Label>
-            <Button layoutX="358.0" layoutY="470.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: FFE0A5;" text="Unlock">
+            <Button layoutX="347.0" layoutY="439.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: FFE0A5;" text="Unlock">
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -137,7 +141,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <TextField editable="false" layoutX="417.0" layoutY="27.0" prefHeight="25.0" prefWidth="116.0" promptText="O que Procura" style="-fx-border-radius: 30;">
+            <TextField editable="false" layoutX="417.0" layoutY="27.0" prefHeight="25.0" prefWidth="116.0" promptText="O que Procura">
                <padding>
                   <Insets left="30.0" />
                </padding>
@@ -147,6 +151,7 @@
                   <Image url="@../images/search.png" />
                </image>
             </ImageView>
+            <Label layoutX="41.0" layoutY="472.0" prefHeight="44.0" prefWidth="80.0" text="credits for: tech-dev-team" wrapText="true" />
          </children>
       </AnchorPane>
    </children>
