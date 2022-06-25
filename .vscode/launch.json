@@ -6,6 +6,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch teste",
+            "request": "launch",
+            "mainClass": "application.teste",
+            "projectName": "ProjectAgency_afe11",
+            "vmArgs": "--module-path /home/jefferson/JavaLibs/javafx-sdk-18.0.1/lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
