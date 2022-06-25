@@ -7,7 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.Parent;
 
-public class AplicationControllerTest {
+public class MainController {
 
     @FXML
     AnchorPane contentHome;
