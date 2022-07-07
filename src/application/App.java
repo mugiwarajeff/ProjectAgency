@@ -13,15 +13,13 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException{
-        //Group root = new Group();
 
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../Scenes/Scenes.fxml"));
-        //FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../Scenes/AgencyInput.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root); //setting colors in out scene
         //Image icon = new Image("images/instagram-logo.png");
     
-        primaryStage.setTitle("Hello World!!"); //setting the titles of stage
+        primaryStage.setTitle("Agency");
         primaryStage.setResizable(false);
 
         primaryStage.setScene(scene);
