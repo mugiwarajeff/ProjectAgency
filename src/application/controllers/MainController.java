@@ -1,4 +1,4 @@
-package application;
+package application.controllers;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -15,7 +15,7 @@ public class MainController {
 
     @FXML
     public void switchToShow(ActionEvent e) throws IOException{
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../Scenes/View.fxml"));
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../../Scenes/View.fxml"));
         Parent root = loader.load();
         contentHome.getChildren().clear();
         contentHome.getChildren().add(root);
@@ -23,7 +23,7 @@ public class MainController {
 
     @FXML
     public void switchToHome(ActionEvent e) throws IOException{
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../Scenes/Home.fxml"));
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../../Scenes/Home.fxml"));
         Parent root = loader.load();
         contentHome.getChildren().clear();
         contentHome.getChildren().add(root);
@@ -31,7 +31,7 @@ public class MainController {
 
     @FXML
     public void switchToConfig(ActionEvent e) throws IOException{
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../Scenes/Configs.fxml"));
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../../Scenes/Configs.fxml"));
         Parent root = loader.load();
         contentHome.getChildren().clear();
         contentHome.getChildren().add(root);
@@ -39,7 +39,7 @@ public class MainController {
 
     @FXML
     public void loadHome() throws IOException{
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../Scenes/Home.fxml"));
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../../Scenes/Home.fxml"));
         Parent root = loader.load();
         contentHome.getChildren().clear();
         contentHome.getChildren().add(root);

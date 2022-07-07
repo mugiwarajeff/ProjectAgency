@@ -8,14 +8,14 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="443.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="443.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ConfigController">
    <children>
       <Label layoutY="70.0" text="Bank Config" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Group layoutX="43.0" layoutY="167.0">
+      <Group fx:id="managerGroup" layoutX="43.0" layoutY="167.0" onMouseClicked="#callManagerInput">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe0a5" height="185.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
             <ImageView fitHeight="127.0" fitWidth="127.0" layoutX="12.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
@@ -30,7 +30,7 @@
             </Label>
          </children>
       </Group>
-      <Group layoutX="248.0" layoutY="167.0">
+      <Group fx:id="AgencyGroup" layoutX="248.0" layoutY="167.0" onMouseClicked="#callAgencyInput">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff5e1" height="185.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
             <ImageView fitHeight="143.0" fitWidth="138.0" layoutX="6.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
