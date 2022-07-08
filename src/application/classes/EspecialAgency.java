@@ -12,6 +12,6 @@ public class EspecialAgency extends Agency{
     }
 
     public void showAgency(){
-        //System.out.printf("NOME: %s\nCNPJ: %s\nENDEREÇO: %s\nGERENTE: %s\nCAMPANHA: %s\n", name, cnpj, adress, manager, vinheta);
+        System.out.printf("NOME: %s\nCNPJ: %s\nENDEREÇO: %s\nGERENTE: %s\nCAMPANHA: %s\n", name, cnpj, adress, manager, vinheta);
     }
 }

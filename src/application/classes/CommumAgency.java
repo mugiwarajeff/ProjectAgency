@@ -9,6 +9,6 @@ public class CommumAgency extends Agency{
     }
 
     public void showAgency(){
-        //System.out.printf("NOME: %s\nCNPJ: %s\nENDEREÇO: %s\nGERENTE: %s\nCAMPANHA: %s\n", name, cnpj, adress, manager, commum);
+        System.out.printf("NOME: %s\nCNPJ: %s\nENDEREÇO: %s\nGERENTE: %s\nCAMPANHA: %s\n", name, cnpj, adress, manager, commum);
     }
 }

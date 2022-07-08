@@ -33,6 +33,8 @@ public class ManagerInputController {
         Manager manager = new Manager(inputManagerName.getText(), inputManagerLast.getText(), inputManagerCPF.getText());
         App.managerBank.insert(manager);
         App.managerBank.report();
-        System.out.println(manager.getCpf());
+
+        Stage managerInput = ConfigController.getManagerInput(); //fecha ao registrar
+        managerInput.close();
     }
 }

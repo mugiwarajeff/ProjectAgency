@@ -39,4 +39,14 @@ public class ManagerBank {
             //System.out.println("===============");
         }
     }
+
+    public String[] getManagersNames(){
+        String[] arrayOfNames = new String[index];
+
+        for (int i = 0; i < index; i++){
+            arrayOfNames[i] = bank[i].name;
+        }
+        
+        return arrayOfNames;
+    }
 }
