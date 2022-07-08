@@ -24,7 +24,7 @@ public class App extends Application {
         Parent root = loader.load();
         Scene scene = new Scene(root); //setting colors in out scene
         //Image icon = new Image("images/instagram-logo.png"); comentario qualquer
-    
+        
         primaryStage.setTitle("Agency");
         primaryStage.setResizable(false);
 
