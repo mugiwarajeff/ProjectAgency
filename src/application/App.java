@@ -1,5 +1,8 @@
 package application;
 import java.io.IOException;
+
+import application.classes.AgencyBank;
+import application.classes.ManagerBank;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,6 +10,9 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 
 public class App extends Application {
+    public static AgencyBank  agencyBank = new AgencyBank();
+    public static ManagerBank managerBank = new ManagerBank();
+    
     public static void main(String[] args){
         launch(args);
     }

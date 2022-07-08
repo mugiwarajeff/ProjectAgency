@@ -28,6 +28,6 @@ public class Manager {
     }
 
     public void showManager(){
-        //System.out.printf("Nome: %s\nSobrenome: %s\nCPF: %s\n", name, lastName, cpf);
+        System.out.printf("Nome: %s\nSobrenome: %s\nCPF: %s\n", name, lastName, cpf);
     }
 }
