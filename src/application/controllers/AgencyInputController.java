@@ -4,14 +4,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javax.swing.Action;
 
 import application.App;
 import application.classes.Adress;
 import application.classes.Commum;
 import application.classes.CommumAgency;
 import application.classes.EspecialAgency;
-import application.classes.Manager;
 import application.classes.Vinheta;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,7 +18,6 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class AgencyInputController implements Initializable {
