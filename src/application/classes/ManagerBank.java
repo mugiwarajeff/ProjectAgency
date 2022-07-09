@@ -49,4 +49,8 @@ public class ManagerBank {
         
         return arrayOfNames;
     }
+
+    public int getBankLenght(){
+        return index;
+    }
 }

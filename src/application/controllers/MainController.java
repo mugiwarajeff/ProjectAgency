@@ -1,16 +1,30 @@
 package application.controllers;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
+import application.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.Parent;
+import javafx.scene.control.Label;
 
-public class MainController {
+public class MainController implements Initializable{ 
 
     @FXML
     AnchorPane contentHome;
+
+    @FXML
+    private Label totalRegisters;
+
+    @FXML 
+    private Label totalCommum;
+
+    @FXML
+    private Label totalEspecial;
     
 
     @FXML
@@ -43,5 +57,12 @@ public class MainController {
         Parent root = loader.load();
         contentHome.getChildren().clear();
         contentHome.getChildren().add(root);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        totalRegisters.setText(Integer.toString(App.agencyBank.getBankLenght()));
+        totalCommum.setText(Integer.toString(App.agencyBank.getBankEspecialLenght()));
+        totalEspecial.setText(Integer.toString(App.agencyBank.getBankCommumLenght()));    
     }
 }

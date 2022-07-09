@@ -39,4 +39,35 @@ public class AgencyBank {
             //System.out.println("=======================================================");
         }
     }
+
+    public int getBankLenght(){
+        return index;
+    }
+
+    public int getBankEspecialLenght(){
+        int quantReturn = 0;
+
+        for(int i = 0; i < index; i++){
+            if (bank[i] instanceof EspecialAgency){
+                quantReturn++;
+            }
+        }
+
+        return quantReturn;
+    }
+
+    public int getBankCommumLenght(){
+        int quantReturn = 0;
+        for(int i = 0; i < index; i++){
+            if (bank[i] instanceof CommumAgency){
+                quantReturn++;
+            }
+        }
+        
+        return quantReturn;
+    }
+
+    public Agency[] getBankItens(){
+        return bank;
+    }
 }
