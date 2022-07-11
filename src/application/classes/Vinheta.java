@@ -12,16 +12,17 @@ public class Vinheta extends Campaign{
         return this.description;
     }
 
-    public double getValue(){
-        return this.value;
+    public String getValue(){
+        return String.valueOf(this.value);
     }
 
-    public int getCode(){
-        return this.code;
+    public String getCode(){
+        return String.valueOf(this.code);
     }
 
-    public double getTime(){
-        return this.time;
+    @Override
+    public String getTime(){
+        return String.valueOf(this.time);
     }
 
     public String toString(){

@@ -18,4 +18,24 @@ public abstract class Agency {
     public String getName() {
         return this.name;
     }
+
+    public String getCNPJ(){
+        return this.cnpj;
+    }
+
+    public Adress getAdress(){
+        return this.adress;
+    }
+
+    public Manager getManager(){
+        return this.manager;
+    }
+
+    public String getManagerName(){
+        return this.manager.getName();
+    }
+
+    public abstract Campaign getCampaign();
+
+    
 }

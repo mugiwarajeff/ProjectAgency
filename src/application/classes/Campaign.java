@@ -12,4 +12,20 @@ public abstract class Campaign {
     }
 
     public abstract void showCampaign();
+
+    public String getDescription(){
+        return this.description;
+    }
+
+    public String getValue(){
+        return String.valueOf(this.value);
+    }
+
+    public String getCode(){
+        return String.valueOf(this.code);
+    }
+
+    public String getTime(){
+        return "";
+    };
 }

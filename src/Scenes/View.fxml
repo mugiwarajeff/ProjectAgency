@@ -14,6 +14,6 @@
          </font>
       </Label>
       <ListView fx:id="showArea" layoutX="36.0" layoutY="158.0" prefHeight="351.0" prefWidth="385.0" style="-fx-border-color: none;" />
-      <Button layoutX="294.0" layoutY="93.0" mnemonicParsing="false" onAction="#showUpdate" text="Button" />
+      <Button layoutX="366.0" layoutY="115.0" mnemonicParsing="false" onAction="#showUpdate" style="-fx-background-color: FFEBA5;" text="Update" />
    </children>
 </Pane>
