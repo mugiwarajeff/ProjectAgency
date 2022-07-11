@@ -121,44 +121,53 @@
                   </Group>
                   <Group layoutX="5.0" layoutY="187.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe0a5" height="115.0" layoutX="-10.0" layoutY="-11.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
-                        <Label text="000">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe0a5" height="115.0" layoutX="-10.0" layoutY="-11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="102.0" />
+                        <Label fx:id="totalRegisters" text="000">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label layoutY="30.0" text="Cadastradas" />
+                        <Label layoutY="30.0" prefHeight="47.0" prefWidth="86.0" text="Total of Registers" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
                      </children>
                   </Group>
                   <Group layoutX="128.0" layoutY="189.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffebc5" height="115.0" layoutX="-10.0" layoutY="-11.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
-                        <Label text="000">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffebc5" height="115.0" layoutX="-10.0" layoutY="-11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="102.0" />
+                        <Label fx:id="totalCommum" text="000">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label layoutY="30.0" text="Cadastradas" />
+                        <Label layoutY="30.0" prefHeight="51.0" prefWidth="81.0" text="Total of Communs" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
                      </children>
                   </Group>
                   <Group layoutX="254.0" layoutY="189.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff5e1" height="115.0" layoutX="-8.0" layoutY="-10.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="102.0">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff5e1" height="115.0" layoutX="-8.0" layoutY="-10.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="102.0">
                            <effect>
                               <Blend />
                            </effect>
                         </Rectangle>
-                        <Label layoutY="-9.0" text="000">
+                        <Label fx:id="totalEspecial" text="000">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label layoutY="21.0" text="Cadastradas" />
+                        <Label layoutY="30.0" prefHeight="44.0" prefWidth="79.0" text="Total of Especials" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
                      </children>
                   </Group>
                   <Group fx:id="searchBar" layoutX="217.0">
                      <children>
-                        <TextField editable="false" prefHeight="25.0" prefWidth="116.0" promptText="Search">
+                        <TextField prefHeight="25.0" prefWidth="116.0" promptText="Search">
                            <padding>
                               <Insets left="30.0" />
                            </padding>

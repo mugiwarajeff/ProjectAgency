@@ -10,12 +10,12 @@ public class Commum extends Campaign{
         return this.description;
     }
 
-    public double getValue(){
-        return this.value;
+    public String getValue(){
+        return String.valueOf(this.value);
     }
 
-    public int getCode(){
-        return this.code;
+    public String getCode(){
+        return String.valueOf(this.code);
     }
 
     public String toString(){

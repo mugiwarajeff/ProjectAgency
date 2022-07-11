@@ -6,6 +6,7 @@ import application.App;
 import application.classes.Manager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -29,12 +30,17 @@ public class ManagerInputController {
 
     @FXML
     public void registerManager(ActionEvent e) throws IOException{
-
-        Manager manager = new Manager(inputManagerName.getText(), inputManagerLast.getText(), inputManagerCPF.getText());
-        App.managerBank.insert(manager);
-        App.managerBank.report();
-
-        Stage managerInput = ConfigController.getManagerInput(); //fecha ao registrar
-        managerInput.close();
+        if(inputManagerName.getText().trim().isEmpty()||inputManagerLast.getText().trim().isEmpty()||inputManagerCPF.getText().trim().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Complete todos os campos");
+            alert.show();
+            }else{
+            Manager manager = new Manager(inputManagerName.getText(), inputManagerLast.getText(), inputManagerCPF.getText());
+            App.managerBank.insert(manager);
+            App.managerBank.report();
+            Stage managerInput = ConfigController.getManagerInput(); //fecha ao registrar
+            managerInput.close();
+        }
     }
 }

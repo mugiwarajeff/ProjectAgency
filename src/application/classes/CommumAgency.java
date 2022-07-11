@@ -11,4 +11,13 @@ public class CommumAgency extends Agency{
     public void showAgency(){
         System.out.printf("NOME: %s\nCNPJ: %s\nENDEREÇO: %s\nGERENTE: %s\nCAMPANHA: %s\n", name, cnpj, adress, manager, commum);
     }
+
+    public Commum getCommum(){
+        return this.commum;
+    }
+
+    @Override
+    public Campaign getCampaign(){
+        return this.commum;
+    }
 }
