@@ -1,5 +1,6 @@
 package application.controllers;
 
+import java.awt.Event;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -92,7 +93,9 @@ public class ShowController implements Initializable{
     @FXML
     public void showAgency()throws IOException{
 
-
+        System.out.println("evento");
+        Agency a = App.agencyBank.search("jefferson");
+        System.out.println(a);
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../../Scenes/AgencyShow.fxml"));
         Pane root = loader.load();
