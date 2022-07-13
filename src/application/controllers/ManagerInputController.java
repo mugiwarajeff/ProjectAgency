@@ -6,7 +6,9 @@ import application.App;
 import application.classes.Manager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class ManagerInputController {
@@ -36,5 +38,11 @@ public class ManagerInputController {
 
         Stage managerInput = ConfigController.getManagerInput(); //fecha ao registrar
         managerInput.close();
+
+        Alert alert = new Alert(AlertType.CONFIRMATION);
+        alert.setTitle("Manager Confirmation");
+        alert.setHeaderText("Your manager registration has been successed");
+        alert.getButtonTypes().remove(1);
+        alert.showAndWait();
     }
 }

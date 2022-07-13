@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
@@ -135,5 +136,10 @@
             <Font size="20.0" />
          </font>
       </Label>
+      <Group layoutX="258.0" layoutY="452.0">
+         <children>
+            <Button fx:id="deleteButton" contentDisplay="RIGHT" layoutX="30.0" layoutY="-4.0" mnemonicParsing="false" onAction="#removeAgency" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: c82e2e;" text="Delete" textAlignment="CENTER" textFill="WHITE" />
+         </children>
+      </Group>
    </children>
 </Pane>

@@ -70,9 +70,7 @@ public class AgencyInputController implements Initializable {
 
     @FXML
     public void agencyRegister(ActionEvent e) throws IOException{
-        Adress adress = new Adress(adressInputPlace.getText(), Integer.parseInt(adressInputNumber.getText()), adressInputPostal.getText());
-        System.out.println(managerChoice.getValue());
-
+        
         if(managerChoice.getValue() == null){
             System.out.println("entrei no alert");
             Alert alert = new Alert(AlertType.WARNING);
@@ -80,42 +78,59 @@ public class AgencyInputController implements Initializable {
             alert.setHeaderText("Please select a manager to you agency");
             alert.setContentText("If you don't have registry a manager, please do it on the previous screen");
             alert.showAndWait();
-        }else if(false){}else{
+        }else{
 
             Alert alert = new Alert(AlertType.CONFIRMATION);
             alert.getButtonTypes().remove(1);
             alert.setTitle("Register Confirmation");
             alert.setHeaderText("Your register has been confirmed");
-            alert.showAndWait();
+            
 
             try {
+                Adress adress = new Adress(adressInputPlace.getText(), Integer.parseInt(adressInputNumber.getText()), adressInputPostal.getText());
+                System.out.println(managerChoice.getValue());
+
                 if(especialInput.isSelected()){
-                    Vinheta vinheta = new Vinheta(campaingInputDescription.getText(), Double.parseDouble(campaingInputValue.getText()), Integer.parseInt(campaignInputCode.getText()), Double.parseDouble(vinhetaInputTime.getText()));
-                    EspecialAgency especialAgency = new EspecialAgency(agencyInputName.getText(), agencyInputCNPJ.getText(), adress, App.managerBank.search(managerChoice.getValue()), vinheta);
+                    Vinheta vinheta = new Vinheta(campaingInputDescription.getText(), 
+                    Double.parseDouble(campaingInputValue.getText()), 
+                    Integer.parseInt(campaignInputCode.getText()), 
+                    Double.parseDouble(vinhetaInputTime.getText()));
+
+
+                    EspecialAgency especialAgency = new EspecialAgency(agencyInputName.getText(), 
+                    agencyInputCNPJ.getText(), 
+                    adress, 
+                    App.managerBank.search(managerChoice.getValue()),
+                    vinheta);
         
                     App.agencyBank.insert(especialAgency);
-                    System.out.println(especialAgency);
+                    alert.showAndWait();
+
                 }else{
-                    Commum commum = new Commum(campaingInputDescription.getText(), Double.parseDouble(campaingInputValue.getText()), Integer.parseInt(campaignInputCode.getText()));
-                    CommumAgency commumAgency = new CommumAgency(agencyInputName.getText(), agencyInputCNPJ.getText(), adress, App.managerBank.search(managerChoice.getValue()), commum);
+                    Commum commum = new Commum(campaingInputDescription.getText(),
+                    Double.parseDouble(campaingInputValue.getText()), 
+                    Integer.parseInt(campaignInputCode.getText()));
+
+                    CommumAgency commumAgency = new CommumAgency(agencyInputName.getText(), 
+                    agencyInputCNPJ.getText(), 
+                    adress, 
+                    App.managerBank.search(managerChoice.getValue()), 
+                    commum);
         
                     App.agencyBank.insert(commumAgency);
+                    alert.showAndWait();
                 }
 
                 Stage agencyInput = ConfigController.getAgencyInput();
                 agencyInput.close(); //fecha ao registrar
 
-            }catch(Exception erro){
+            }catch(NumberFormatException erro){
                 Alert alertError = new Alert(AlertType.ERROR);
+                alertError.setHeaderText("Error to cadastry an agency");
+                alertError.setContentText("Please input valid values for the numeric fields");
                 alertError.showAndWait();
             }
-           
-    
-            
         }
-
-        
-        
     }
 
     @FXML

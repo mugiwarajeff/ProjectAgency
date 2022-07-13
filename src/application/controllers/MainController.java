@@ -62,7 +62,7 @@ public class MainController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         totalRegisters.setText(Integer.toString(App.agencyBank.getBankLenght()));
-        totalCommum.setText(Integer.toString(App.agencyBank.getBankEspecialLenght()));
-        totalEspecial.setText(Integer.toString(App.agencyBank.getBankCommumLenght()));    
+        totalCommum.setText(Integer.toString(App.agencyBank.getBankCommumLenght()));
+        totalEspecial.setText(Integer.toString(App.agencyBank.getBankEspecialLenght()));    
     }
 }

@@ -1,27 +1,21 @@
 package application.controllers;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.concurrent.TimeUnit;
 
 import application.App;
 import application.classes.Agency;
 import application.classes.infoBar;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -29,7 +23,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 
-public class ShowController implements Initializable{
+public class ShowController{
 
     public static String name;
     public static String CNPJ;
@@ -42,7 +36,7 @@ public class ShowController implements Initializable{
     public static String value;
     public static String code;
     public static String time;
-    private static int indexSelected = 0;
+    static int indexSelected = 0;
 
     
     @FXML
@@ -124,7 +118,10 @@ public class ShowController implements Initializable{
         return returnParents;
     }
 
-    public void showUpdate(ActionEvent e) throws IOException{
+    public void showUpdate() throws IOException{
+        
+        showArea.getItems().clear();
+
         Agency[] bankItens = App.agencyBank.getBankItens();
         infoBar[] bankItens2 = transformItensInParents(bankItens);
 
@@ -132,13 +129,5 @@ public class ShowController implements Initializable{
             showArea.getItems().add(bankItens2[i].getParent());
         }
     }
-
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        //indexSelected = showArea.getSelectionModel().getSelectedIndex();
-        //showArea.getItems().addAll(transformItensInParents(App.agencyBank.getBankItens()));
-    }
-    
 
 }
