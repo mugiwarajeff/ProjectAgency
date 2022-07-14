@@ -36,7 +36,6 @@ public class ManagerBank {
     public void report(){
         for(int i = 0; i < index; i++){
             bank[i].showManager();
-            //System.out.println("===============");
         }
     }
 

@@ -6,7 +6,7 @@ public class AgencyBank {
 
     public AgencyBank(){
         index = 0;
-        bank = new Agency[10];
+        this.bank = new Agency[10];
     }
 
     public void insert(Agency a){
@@ -25,8 +25,9 @@ public class AgencyBank {
     }
 
     public Agency search(String a){
+
         for(int i = 0; i < index; i++){
-            if(bank[i].getName() == a){
+            if(bank[i].getName().equals(a)){
                 return bank[i];
             }
         }
@@ -36,7 +37,6 @@ public class AgencyBank {
     public void report(){
         for(int i = 0; i < index; i++){
             bank[i].showAgency();
-            //System.out.println("=======================================================");
         }
     }
 

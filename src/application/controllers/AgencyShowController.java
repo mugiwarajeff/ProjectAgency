@@ -2,6 +2,7 @@ package application.controllers;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import application.App;
@@ -14,9 +15,9 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Stage;
 
 
 
@@ -58,16 +59,22 @@ public class AgencyShowController implements Initializable {
 
     public void removeAgency(ActionEvent e) throws IOException{
         Agency a = App.agencyBank.getBankItens()[ShowController.indexSelected];
-        System.out.println(a);
-        System.out.println(agencyInputName2.getText());
-        //App.agencyBank.remove(a);
-        
-        ButtonType button = new ButtonType("Cancel");
+    
         Alert alert = new Alert(AlertType.CONFIRMATION);
-        //alert.getButtonTypes().add(button);
         alert.setTitle("Remove Confirmation");
         alert.setContentText("You really want remove this agency?");
-        alert.showAndWait();
+        Optional<ButtonType> option = alert.showAndWait();
+        
+        if (option.get() == ButtonType.OK){
+            App.agencyBank.remove(a);
+            Alert alertDeleteConfirm = new Alert(AlertType.INFORMATION);
+            alertDeleteConfirm.setTitle("Delete Confirmation");
+            alertDeleteConfirm.setHeaderText("Your Agency has been removed");
+            alertDeleteConfirm.showAndWait();
+            
+            Stage agecyShow = ShowController.getStageShow();
+            agecyShow.close();
+        }
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {

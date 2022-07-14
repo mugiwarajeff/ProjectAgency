@@ -5,17 +5,14 @@ import java.io.IOException;
 import application.App;
 import application.classes.Agency;
 import application.classes.infoBar;
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -51,7 +48,12 @@ public class ShowController{
     @FXML
     private TextField agencyInputName;
 
+    private static Stage stageShow = new Stage();
 
+
+    public static Stage getStageShow(){
+        return stageShow;
+    }
     private infoBar[] transformItensInParents(Agency[] a) throws IOException{
         infoBar[] returnParents = new infoBar[App.agencyBank.getBankLenght()];
 
@@ -91,14 +93,12 @@ public class ShowController{
                     time = a.getCampaign().getTime();
         
         
-                Stage stage = new Stage();
                 FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../../Scenes/AgencyShow.fxml"));
                 Pane root = loader.load();
         
-                
                 Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
+                stageShow.setScene(scene);
+                stageShow.show();
         
             }
         });

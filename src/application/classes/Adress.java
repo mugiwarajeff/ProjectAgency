@@ -26,8 +26,4 @@ public class Adress {
     public String toString(){
         return "Espaço público:" + this.publicPlace + " | Número:" + this.number + " | Código Postal:" + this.postalCode;
     }
-
-    public void showAdress(){
-        //System.out.printf("Lugar público: %s\nNúmero: %s\nCódigo postal: %s\n", publicPlace, number, postalCode);
-    }
 }

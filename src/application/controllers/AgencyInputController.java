@@ -72,7 +72,6 @@ public class AgencyInputController implements Initializable {
     public void agencyRegister(ActionEvent e) throws IOException{
         
         if(managerChoice.getValue() == null){
-            System.out.println("entrei no alert");
             Alert alert = new Alert(AlertType.WARNING);
             alert.setTitle("Manager Error");
             alert.setHeaderText("Please select a manager to you agency");
@@ -88,7 +87,6 @@ public class AgencyInputController implements Initializable {
 
             try {
                 Adress adress = new Adress(adressInputPlace.getText(), Integer.parseInt(adressInputNumber.getText()), adressInputPostal.getText());
-                System.out.println(managerChoice.getValue());
 
                 if(especialInput.isSelected()){
                     Vinheta vinheta = new Vinheta(campaingInputDescription.getText(), 
@@ -143,7 +141,6 @@ public class AgencyInputController implements Initializable {
     }
 
     @FXML void registerToggle(ActionEvent e){
-        System.out.println("entrei no register toggle");
         if (managerChoice.getValue() == ""){
             agencyRegisterButton.setDisable(false);
         }
