@@ -1,6 +1,5 @@
 package application.controllers;
 
-import java.awt.Event;
 import java.io.IOException;
 
 import application.App;
@@ -118,25 +117,6 @@ public class ShowController{
 
         return returnParents;
     }
-<<<<<<< HEAD
-    public void showUpdate(ActionEvent e) throws IOException{
-        Agency[] bankItens = App.agencyBank.getBankItens();
-        showArea.getItems().addAll(transformItensInParents(bankItens));
-
-
-    }
-
-    @FXML
-    public void showAgency()throws IOException{
-
-        System.out.println("evento");
-        Agency a = App.agencyBank.search("jefferson");
-        System.out.println(a);
-        Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../../Scenes/AgencyShow.fxml"));
-        Pane root = loader.load();
-=======
->>>>>>> infoBar
 
     public void showUpdate() throws IOException{
         
