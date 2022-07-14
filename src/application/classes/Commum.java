@@ -18,10 +18,6 @@ public class Commum extends Campaign{
         return String.valueOf(this.code);
     }
 
-    public String toString(){
-        return "Descrição:" + this.description + " | Valor:" + this.value + " | Código:" + this.code;
-    }
-
     public void showCampaign(){
         //System.out.printf("Descrição: %s\nValor: %s\nCódigo: %s\n", description, value, code);
     }
